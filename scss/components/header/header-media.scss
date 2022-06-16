@@ -1,0 +1,100 @@
+.header{
+  &__media-menu-btn{
+    display: none;
+  }
+}
+
+@media (max-width:$breakpoint_xxl){
+  header{
+    .header__search-store img{
+     width: 50%;
+    }
+    .header__store-form input {
+      justify-content: center;
+    }
+  }
+}
+@media (max-width: $breakpoint_xl){
+  header {
+    .header__menu-products {
+      width: 100%;
+      gap: 15px;
+      flex-direction: column;
+    }
+    .header__navbar-menu {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+@media (max-width: $breakpoint_md){
+  header{
+    .row{
+      flex-direction: column;
+    }
+    .header__navbar-menu{
+      width: 100%;
+    }
+  }
+}
+@media (min-width:$breakpoint_ms){
+[for="media-menu-btn"]{
+  display: none;
+}
+}
+
+@media (max-width:$breakpoint_ms) {
+  header {
+    & {
+      position: relative;
+    }
+
+    & [for="media-menu-btn"] {
+      color: #000000;
+      font-size: $default-size;
+      font-weight: $default-font;
+      gap: 10px;
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      color: white !important;
+      background-color: #F4DE4D;
+      border-radius: 25px;
+      transition: .3s;
+    }
+    &__navigathion {
+      nav {
+        width: 100%;
+        display: initial;
+        position: absolute;
+      }
+    }
+    &__media-menu-btn {
+      &:checked {
+        & + nav {
+          display: initial;
+        }
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: $breakpoint_sm){
+  header{
+    .header__navbar-menu{
+      display: none;
+    }
+    .header__menu-products{
+      width: 60%;
+    }
+    .row{
+      align-items: center;
+    }
+  }
+}
+@media (max-width: $breakpoint_xs){
+
+}
